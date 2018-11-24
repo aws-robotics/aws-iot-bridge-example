@@ -1,0 +1,13 @@
+<launch>
+  <arg name="bridge_params" />
+  <node name="mqtt_bridge" pkg="mqtt_bridge" type="mqtt_bridge_node.py" output="screen">
+    <rosparam command="delete" param="" />
+    <rosparam command="load" ns="mqtt" file="$(find aws_iot_mqtt_bridge)/config/aws_iot_params.yaml" />
+
+    <rosparam param="mqtt/tls/ca_certs" subst_value="true">$(find aws_iot_mqtt_bridge)/config/certs/AmazonRootCA1.pem</rosparam>
+    <rosparam param="mqtt/tls/certfile" subst_value="true">$(find aws_iot_mqtt_bridge)/config/certs/device.cert.pem</rosparam>
+    <rosparam param="mqtt/tls/keyfile" subst_value="true">$(find aws_iot_mqtt_bridge)/config/certs/device.private.pem</rosparam>
+
+    <rosparam command="load" file="$(arg bridge_params)" />
+  </node>
+</launch>

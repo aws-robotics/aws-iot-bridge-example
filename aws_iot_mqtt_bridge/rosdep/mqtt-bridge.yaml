@@ -1,0 +1,20 @@
+mosquitto:
+  ubuntu: [mosquitto]
+mosquitto-clients:
+  ubuntu: [mosquitto-clients]
+msgpack-python-pip:
+  ubuntu:
+    xenial:
+      pip:
+        packages: [msgpack-python]
+    bionic:
+      pip:
+        packages: [msgpack-python]
+pymongo-pip:
+  ubuntu:
+    xenial:
+      pip:
+        packages: [pymongo]
+    bionic:
+      pip:
+        packages: [pymongo]
