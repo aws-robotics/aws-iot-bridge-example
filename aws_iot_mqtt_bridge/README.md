@@ -51,7 +51,7 @@ roslaunch my_package my_package.launch
 The [mqtt_bridge](https://github.com/groove-x/mqtt_bridge) package depends on a few pip and system packages which are not in the ROS Kinetic distro. In order to install mqtt_bridge, you must either follow the installation instructions in the repository, or you can also just add the (mqtt-bridge-deps.yaml)[rosdistro/mqtt-bridge-deps.yaml] to your sources list.
 
 ```
-sudo bash -c "echo \"yaml https://raw.githubusercontent.com/aws-robotics/aws-iot-bridge-example/aws_iot_mqtt_bridge/rosdep/gh-pages/mqtt-bridge.yaml\" > /etc/ros/rosdep/sources.list.d/30-mqtt-bridge.list"
+sudo bash -c "echo \"yaml https://raw.githubusercontent.com/aws-robotics/aws-iot-bridge-example/release-v1/aws_iot_mqtt_bridge/rosdep/mqtt-bridge.yaml\" > /etc/ros/rosdep/sources.list.d/30-mqtt-bridge.list"
 rosdep update
 rosdep install --from-paths aws_iot_mqtt_bridge --ignore-src -y
 ```
