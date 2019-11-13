@@ -19,7 +19,6 @@ The source code is released under an [Apache 2.0].
 
 ### Supported ROS Distributions
 - Kinetic
-- Melodic
 
 ## Installation
 
