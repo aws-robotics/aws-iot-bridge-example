@@ -25,12 +25,6 @@ The source code is released under an [Apache 2.0].
 ### IoT Device Certificate
 You will need to create an AWS Account and configure the credentials to be able to communicate with AWS services. You may find [AWS Configuration and Credential Files] helpful. In addition to AWS credentials to communicate with AWS IoT, you will need to generate an X.509 certificate in order to identify your robot to AWS IoT Core. For more information, please visit [managing device certificates](https://docs.aws.amazon.com/iot/latest/developerguide/managing-device-certs.html).
 
-### Binaries
-On Ubuntu you can install the latest version of this package using the following command
-
-        sudo apt-get update
-        sudo apt-get install -y ros-kinetic-iot-bridge
-
 ### Building from Source
 
 To build from source you'll need to create a new workspace, clone and checkout the latest release branch of this repository, install all the dependencies, and compile. If you need the latest development features you can clone from the `master` branch instead of the latest release branch. While we guarantee the release branches are stable, __the `master` should be considered to have an unstable build__ due to ongoing development. 
