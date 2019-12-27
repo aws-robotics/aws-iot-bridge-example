@@ -20,6 +20,7 @@ The source code is released under an [Apache 2.0].
 ### Supported ROS Distributions
 - Kinetic
 
+
 ## Installation
 
 ### IoT Device Certificate
@@ -31,7 +32,7 @@ To build from source you'll need to create a new workspace, clone and checkout t
 
 - Create a ROS workspace and a source directory
 
-    mkdir -p ~/ros-workspace/src
+        mkdir -p ~/ros-workspace/src
 
 - Clone the package into the source directory . 
 
@@ -57,15 +58,15 @@ _Note: If building the master branch instead of a release branch you may need to
         source ~/ros-workspace/install/setup.bash
 
 
-
 ## Launch Files
 An example launch file called `aws_iot_bridge.launch` is provided, however the launch file cannot work without proper configuration. Since AWS IoT uses unique endpoints and certificates for each account and device, you must first discover your AWS IoT endpoint and generate a certificate before you can connect.
+
 
 ## Usage
 
 ### Run the node
 - **With** launch file using parameters in .yaml format (need to be configured first)
-  - ROS: `roslaunch aws_iot_mqtt_bridge aws_iot_bridge.launch bridge_params:=config/example_aws_iot_params.yaml`
+  - ROS: `roslaunch aws_iot_mqtt_bridge aws_iot_bridge.launch bridge_params:=<path>/config/example_aws_iot_params.yaml`
 
 - **Without** launch file using default values
   - ROS: `rosrun mqtt_bridge mqtt_bridge_node.py`
@@ -77,6 +78,7 @@ An example launch file called `aws_iot_bridge.launch` is provided, however the l
 - Select `Test` from the menu on the left side of the screen
 - Type the name of one of the configured topics and click `Subscribe to topic`
 - You should see messages begin appearing in the bottom half of the screen
+
 
 ## Configuration File and Parameters
 An example configuration file called `example_aws_iot_params.yaml` is provided. When the parameters are absent in the ROS parameter server, the mqtt_bridge will use defaults, please refer to the [mqtt_bridge] package.
@@ -92,6 +94,7 @@ An example configuration file called `example_aws_iot_params.yaml` is provided. 
 | connection/port | Port to use when connecting to AWS IoT core (default is 8883) | *int* | A valid port number (1-65535) |
 | connection/keepalive | TCP connection keep-alive | *int* | Number of seconds greater than zero |
 | client/protocol | MQTT protocol to use when connecting (default is MQTT311 or 4) | *int* | Valid protocol number |
+
 
 ## Node
 
